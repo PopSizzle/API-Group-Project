@@ -1,61 +1,45 @@
-$(document).ready(function() {
   //input from form 
-  // var searchTerm = $("#searchInput").val().trim();
-  var searchTerm = "Bill Clinton";
+  // var recommendedGame = $("#exampleFormControlInput1").val().trim();
+  var selectedGame = "Catan";
   //input from form 
-  // var numberRecords = $("#recordsInput").val().trim();
-  var numberRecords = 5;
-  //override from input form 
-  var beginYear = 1851
+  // var maxResults = $("#exampleFormControlSelect1").val().trim();
+  var maxResults = 1;
+
+  var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=" + maxResults + "&q=" + selectedGame + "&type=video&key=AIzaSyAjs8I4xGPzoBBcuCk4afKvx-IRoVaQX0A"
   
-  // if ($("#beginYearInput").val().trim()) {
-  //     beginYear = $("#beginYearInput").val().trim()
-  // }; 
-
-  //override from input form 
-  var endYear = 2020
-
-  // if ($("#endYearInput").val().trim()) {
-  //     endYear = $("#endYearInput").val().trim()
-  // };
-
-  // $(document).on("click", "#test", function() {
-    function runSearch() {
-
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchTerm + "&begin_date=" + beginYear + "0101&end_date=" + endYear + "1231&sort=newest&api-key=d9wLAp3TYiJAnSURQOH9BYGkKKUvwwS1";
-
+  function youtubeResponse(){
     $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      .then(function(response) {
-          console.log(response)
-        
-          for ( var i = 0; i < numberRecords; i++) {
-              var artDiv = $("<div>");
-              var header = $("<h3>");
-              var author = $("<div>");
-              var webURL = $("<div>");
-              var aTag   = $("<a>")
-              var pubDate = $("<div>");
-              var section = $("<div>");
-              console.log(i);
-              
-              header.text("(" + (i+1) + ")" + response.response.docs[i].headline.main);
-              section.text("section: " + response.response.docs[i].section_name);
-              aTag.attr("href", response.response.docs[i].web_url);
-              aTag.text(response.response.docs[i].web_url);
-              pubDate.text(response.response.docs[i].pub_date);
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
 
-              artDiv.append(header);
-              artDiv.append(section);
-              artDiv.append(pubDate);
-              artDiv.append(aTag);
-              $("#test").append(artDiv);
-          };
-      });
+        for ( var i = 0; i < maxResults; i++) {
+          var videoDiv = $("<div>");
+          var header = $("<h3>");
+          var videoThumbnail = $('<iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>')
+
+          console.log("videoDiv " + (i+1));
+
+          videoDiv.append(header);
+          videoDiv.append(videoThumbnail);
+          $(".video-results").append(videoDiv);
+
+          var videoTitle = response.items[i].snippet.title;
+          console.log(videoTitle);
+
+          var videoId = response.items[i].id.videoId;
+          console.log(videoId);
+
+          var videoDescription = response.items[i].snippet.description
+          console.log(videoDescription);
+
+          videoDiv.attr("id","video" + (i+1));
+          header.text("(" + (i+1) + ")");
+          videoThumbnail.attr("src","https://www.youtube.com/embed/" + videoId)
+          
+        };  
+    });
   };
-  
-  runSearch()
-});
-// });
+    
+  youtubeResponse();
