@@ -2,6 +2,8 @@
 var minPlayers = "";
 var maxPlayers = "";
 var maxPrice = "";
+var workerPlace = "fBOTEBUAmV";
+var varPlayerPowers = "XM2FYZmBHH";
 
 function searchGames(){
     event.preventDefault();
@@ -24,14 +26,21 @@ function searchGames(){
     }).then(function(response){
         $("#gameInfoBox").empty();
         console.log(response);
-        for(var i=0; i<3; i++){
-            var header = $("<h3>");
-            header.text(response.games[i].name);
-            var img = $("<img>");
-            img.attr("src", response.games[i].images.small)
-            $("#gameInfoBox").append(header, img);
-        }
-    })
+
+            var mechSearch = 
+
+            for( var i = 0; i<response.games.length; i++){
+                if(checkMechanics(response.games[i], varPlayerPowers) === true){
+                        console.log("Player Powers");
+                        var header = $("<h3>");
+                        header.text(response.games[i].name);
+                        var img = $("<img>");
+                        img.attr("src", response.games[i].images.small)
+                        $("#gameInfoBox").append(header, img);
+                }
+            }    
+        
+        })
 }
 
 $("#addName").on("click", searchGames);
@@ -59,3 +68,20 @@ $("#addMaxPrice").on("click", function(){
     $("#maxPriceDisplay").text("Maximum Price (MSRP): $" + number);
     console.log(maxPrice);
 })
+
+$("#addMechanic").on("click", function(){
+    event.preventDefault();
+    var mechanic = $("#mechanicInput").val().trim();
+    
+    $("#mechanicDisplay").text("Mechanic: " + mechanic);
+    console.log(mechanic);
+})
+
+function checkMechanics(game, mechID){
+    var array = game.mechanics;
+    for(var j = 0; j < array.length; j++){
+        if(array[j].id === mechID){
+            return true;
+        }
+    }
+}
