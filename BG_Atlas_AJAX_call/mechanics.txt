@@ -1,0 +1,71 @@
+{
+"id": "05zCZoLvQJ",
+"name": "Area Control",
+"checked": false
+},
+
+{
+"id": "AZxlPpi5oq",
+"name": "Auction",
+"checked": false
+},
+
+{
+"id": "xuphiSlrxI",
+"name": "Campaign",
+"checked": false
+},
+
+{
+"id": "33UT4gTFqy",
+"name": "Cooperative",
+"checked": false
+},
+
+{
+"id": "vZsDDAdOoe",
+"name": "Deck Building",
+"checked": false
+},
+
+{
+"id": "R0bGq4cAl4",
+"name": "Dice Rolling",
+"checked": false
+},
+
+{
+"id": "U3zhCQH7Et",
+"name": "Modular Board",
+"checked": false
+},
+
+{
+"id": "Rt6V388y6M",
+"name": "Resource Gathering",
+"checked": false
+},
+
+{
+"id": "DEvPj5twid",
+"name": "Simultaneous Play",
+"checked": false
+},
+
+{
+"id": "GUoWg3Mfh5",
+"name": "Storytelling",
+"checked": false
+},
+
+{
+"id": "8PN2HE86wg",
+"name": "Tile Placement",
+"checked": false
+},
+
+{
+"id": "fBOTEBUAmV",
+"name": "Worker Placement",
+"checked": false
+}

@@ -1,0 +1,89 @@
+{
+"id": "KUBCKBkGxV",
+"name": "Adventure",
+"checked": false
+},
+
+{
+"id": "eX8uuNlQkQ",
+"name": "Card Game",
+"checked": false
+},
+
+{
+"id": "ODWOjWAJj3",
+"name": "City Building",
+"checked": false
+},
+
+{
+"id": "N0TkEGfEsF",
+"name": "Economic",
+"checked": false
+},
+
+{
+"id": "h8wfZG0j3I",
+"name": "Eurogame",
+"checked": false
+},
+
+{
+"id": "yq6hVlbM2R",
+"name": "Exploration",
+"checked": false
+},
+
+{
+"id": "ZTneo8TaIO",
+"name": "Fantasy",
+"checked": false
+},
+
+{
+"id": "cAIkk5aLdQ",
+"name": "Horror",
+"checked": false
+},
+
+{
+"id": "FC6ElKI9tk",
+"name": "Miniatures",
+"checked": false
+},
+
+{
+"id": "X8J7RM6dxX",
+"name": "Party Game",
+"checked": false
+},
+
+{
+"id": "WVMOS3s2pb",
+"name": "Puzzle",
+"checked": false
+},
+
+{
+"id": "2Gu62aKdma",
+"name": "RPG",
+"checked": false
+},
+
+{
+"id": "O0ogzwLUe8",
+"name": "Strategy",
+"checked": false
+},
+
+{
+"id": "buDTYyPw4D",
+"name": "Territory Building",
+"checked": false
+},
+
+{
+"id": "jX8asGGR6o",
+"name": "Wargame",
+"checked": false
+},
