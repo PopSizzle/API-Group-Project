@@ -7,6 +7,9 @@ var maxPlayersDisplay = $("#maxPlayersDisplay");
 var maxPriceInput = $("#maxPriceInput");
 var maxPriceDisplay = $("#maxPriceDisplay");
 var mechanicInput = $("#mechanicInput");
+var mechanicDisplay = $("#mechanicDisplay");
+var categoryInput = $("#categoryInput");
+var categoryDisplay = $("#categoryDisplay");
 var minPlayers = 0;
 var maxPlayers = 100;
 var maxPrice = "&lt_msrp=" + 1000;
@@ -30,6 +33,7 @@ function searchGames(){
     addMaxPlayers();
     addMaxPrice();
     addMechanic();
+    addCategory();
     
     var queryURL = "https://www.boardgameatlas.com/api/search?" + name + minPlayers + maxPlayers + maxPrice + "&client_id=NHfcsxreTb";
     console.log(queryURL);
@@ -81,8 +85,15 @@ function addMaxPrice(){
 function addMechanic(){
     var mechanic = mechanicInput.val().trim();
     
-    $("#mechanicDisplay").text("Mechanic: " + mechanic);
+    mechanicDisplay.text("Mechanic: " + mechanic);
     console.log(mechanic);
+}
+
+function addCategory(){
+    var category = categoryInput.val().trim();
+    
+    categoryDisplay.text("Category: " + category);
+    console.log(category);
 }
 
 function checkMechanics(game, mechID){
