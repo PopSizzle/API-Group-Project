@@ -1,0 +1,23 @@
+{
+  "name": "API-Group-Project",
+  "version": "1.0.0",
+  "description": "API group project due 4/3- Will, Poppe, Cristina",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PopSizzle/API-Group-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PopSizzle/API-Group-Project/issues"
+  },
+  "homepage": "https://github.com/PopSizzle/API-Group-Project#readme",
+  "dependencies": {
+    "tailwindcss": "^1.2.0"
+  }
+}
