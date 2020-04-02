@@ -207,26 +207,24 @@
                 <!--Posts Container-->
                 <div class="flex flex-wrap justify-between pt-12 -mx-6">
 
-                    <!--1/3 col -->
+                    <!-- Row 1 - 1/3 col -->
                     <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
                                 <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
                                     class="h-64 w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED1</p>
-                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
                                 </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc
-                                    commodo posuere et
-                           ß         sit amet ligula.
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
                                 </p>
                             <!-- </a> -->
 
                             <div>
                                 <button
-                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-20">Open
-                                    Modal</button>
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
                     
                                 <!--Modal-->
                                 <div
@@ -234,7 +232,7 @@
                                     <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
                     
                                     <div
-                                        class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
                     
                                         <div
                                             class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
@@ -248,10 +246,10 @@
                                         </div>
                     
                                         <!-- Add margin if you want to see some of the overlay behind the modal-->
-                                        <div class="modal-content p-12 text-left px-6">
+                                        <div class="modal-content p-8 text-left px-6">
                                             <!--Title-->
                                             <div class="flex justify-between items-center pb-3">
-                                                <p class="text-2xl font-bold pb-4" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
                                                     <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
                                                         height="18" viewBox="0 0 18 18">
                                                         <path
@@ -262,17 +260,18 @@
                                             </div>
                     
                                             <!--Body-->
-                                            <!-- <iframe width="400" height="315" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                                            <p id="min-players-modal" class="pt-6">Min # of Players</p>                                            <p id="max-players-modal">Max # of Players</p>
-                                            <p id="purchase-price-modal">Purchase Price $</p>
-                                            <p id="year-published-modal">Year Published</p>
-                                            <p id="category-model">Category</p>
-                                            <p id="mechanics-modal">Mechanics</p>
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
                     
                                             <!--Footer-->
                                             <div class="flex justify-end pt-2">
                                                 <a 
-                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
                                                 </a>
                                                 <button 
                                                     class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
@@ -332,147 +331,988 @@
                     </div>
 
 
-                    <!--1/3 col -->
+                    <!-- Row 1 - 2/3 col -->
                     <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="https://source.unsplash.com/collection/3106804/800x600"
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
                                     class="h-64 w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
                                 </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit amet,
-                                    consectetur adipiscing
-                                    elit. Aliquam at ip Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
                                 </p>
-                            </a>
-                        </div>
-                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                            <div class="flex items-center justify-between">
-                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
-                                    src="http://i.pravatar.cc/300" alt="Avatar of Author" tabindex="0">
-                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
                             </div>
+
+
                         </div>
+                     
                     </div>
 
-                    <!--1/3 col -->
+                    <!-- Row 1 - 3/3 col -->
                     <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="https://source.unsplash.com/collection/539527/800x600"
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
                                     class="h-64 w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-                                <div class="w-full  font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
                                 </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
                                 </p>
-                            </a>
-                        </div>
-                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                            <div class="flex items-center justify-between">
-                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
-                                    src="http://i.pravatar.cc/300" alt="Avatar of Author" tabindex="0">
-                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
                             </div>
+
+
                         </div>
+                     
                     </div>
 
-
-                    <!--1/2 col -->
-                    <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
-                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="https://source.unsplash.com/collection/3657445/800x600"
-                                    class="h-full w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
-                                </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
-                                </p>
-                            </a>
-                        </div>
-                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                            <div class="flex items-center justify-between">
-                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
-                                    src="http://i.pravatar.cc/300" alt="Avatar of Author" tabindex="0">
-                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--1/2 col -->
-                    <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
-                        <div class="flex-1 flex-row bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="https://source.unsplash.com/collection/764827/800x600"
-                                    class="h-full w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
-                                </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
-                                </p>
-                            </a>
-                        </div>
-                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                            <div class="flex items-center justify-between">
-                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
-                                    src="http://i.pravatar.cc/300" alt="Avatar of Author" tabindex="0">
-                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!--2/3 col -->
-                    <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">
-                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="https://source.unsplash.com/collection/325867/800x600"
-                                    class="h-full w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
-                                </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
-                                </p>
-                            </a>
-                        </div>
-                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                            <div class="flex items-center justify-between">
-                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
-                                    src="http://i.pravatar.cc/300" alt="Avatar of Author" tabindex="0">
-                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--1/3 col -->
+                    <!-- Row 2 - 1/3 col -->
                     <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="https://source.unsplash.com/collection/1118905/800x600"
-                                    class="h-full w-full rounded-t pb-6">
-                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-                                <div class="w-full font-bold text-xl text-gray-900 px-6">Lorem ipsum dolor sit amet.
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
+                                    class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
                                 </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    Lorem ipsum eu nunc commodo posuere et sit amet ligula.
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
                                 </p>
-                            </a>
-                        </div>
-                        <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-                            <div class="flex items-center justify-between">
-                                <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name"
-                                    src="http://i.pravatar.cc/300" alt="Avatar of Author" tabindex="0">
-                                <p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
                             </div>
+
+
                         </div>
+                     
+                    </div>
+
+                    <!-- Row 2 - 2/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
+                                    class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
+                            </div>
+
+
+                        </div>
+                     
+                    </div>
+
+
+
+                    <!-- Row 2 - 3/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
+                                    class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
+                            </div>
+
+
+                        </div>
+                     
+                    </div>
+
+                    <!-- Row 3 - 1/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
+                                    class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
+                            </div>
+
+
+                        </div>
+                     
+                    </div>
+                    <!-- Row 3 - 2/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
+                                    class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
+                            </div>
+
+
+                        </div>
+                     
+                    </div>
+                    <!-- Row 3 - 1/3 col -->
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
+                                    class="h-64 w-full rounded-t pb-6">
+                                <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                    
+                                <!--Modal-->
+                                <div
+                                    class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
+                                    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+                    
+                                    <div
+                                        class="modal-container bg-white w-1/3 h-auto mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                    
+                                        <div
+                                            class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
+                                            <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18">
+                                                <path
+                                                    d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                </path>
+                                            </svg>
+                                            <span class="text-sm">(Esc)</span>
+                                        </div>
+                    
+                                        <!-- Add margin if you want to see some of the overlay behind the modal-->
+                                        <div class="modal-content p-8 text-left px-6">
+                                            <!--Title-->
+                                            <div class="flex justify-between items-center pb-3">
+                                                <p class="text-2xl font-bold" id="game-title-modal">Game Title</p>                                                <div class="modal-close cursor-pointer z-50">
+                                                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18"
+                                                        height="18" viewBox="0 0 18 18">
+                                                        <path
+                                                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                    
+                                            <!--Body-->
+                                            <iframe width="300" height="200" src="https://www.youtube.com/embed/cPhX_1RiwEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p id="min-players-modal" class="pt-6 text-xl">Min # of Players</p>
+                                            <p id="max-players-modal" class="text-xl">Max # of Players</p>                                           
+                                            <p id="purchase-price-modal"class="text-xl">Purchase Price $</p>
+                                            <p id="year-published-modal" class="text-xl">Year Published</p>
+                                            <p id="category-model" class="text-xl">Category</p>
+                                            <p id="mechanics-modal" class="text-xl">Mechanics</p>
+                    
+                                            <!--Footer-->
+                                            <div class="flex justify-end pt-2">
+                                                <a 
+                                                    class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2 text-xl" href="https://www.boardgameatlas.com/search/?name=" target="_blank" id="gbatlas-modal">Search on Board Game Atlas
+                                                </a>
+                                                <button 
+                                                    class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 text-xl">Close
+                                                </button>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <script>
+                                    var openmodal = document.querySelectorAll('.modal-open')
+                                    for (var i = 0; i < openmodal.length; i++) {
+                                        openmodal[i].addEventListener('click', function (event) {
+                                            event.preventDefault()
+                                            toggleModal()
+                                        })
+                                    }
+                    
+                                    const overlay = document.querySelector('.modal-overlay')
+                                    overlay.addEventListener('click', toggleModal)
+                    
+                                    var closemodal = document.querySelectorAll('.modal-close')
+                                    for (var i = 0; i < closemodal.length; i++) {
+                                        closemodal[i].addEventListener('click', toggleModal)
+                                    }
+                    
+                                    document.onkeydown = function (evt) {
+                                        evt = evt || window.event
+                                        var isEscape = false
+                                        if ("key" in evt) {
+                                            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+                                        } else {
+                                            isEscape = (evt.keyCode === 27)
+                                        }
+                                        if (isEscape && document.body.classList.contains('modal-active')) {
+                                            toggleModal()
+                                        }
+                                    };
+                    
+                    
+                                    function toggleModal() {
+                                        const body = document.querySelector('body')
+                                        const modal = document.querySelector('.modal')
+                                        modal.classList.toggle('opacity-0')
+                                        modal.classList.toggle('pointer-events-none')
+                                        body.classList.toggle('modal-active')
+                                    }
+                    
+                    
+                                </script>
+                            </div>
+
+
+                        </div>
+                     
                     </div>
 
                 </div>
