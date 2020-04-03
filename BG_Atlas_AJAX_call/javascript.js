@@ -44,9 +44,13 @@ function searchGames(){
         url: queryURL,
         method: "GET"
     }).then(function(response){
-        // Empty Display Box
-        gameBox.empty();
-        console.log(response);
+        
+        if(response.games.length === 0){
+            $("#invalid").text("Your search yielded 0 results. Please adjust your settings and search again.")
+        }
+
+        else{
+            console.log(response);
             // For each game returned, check if category and mechanics preferences are matched
             for( var i = 0; i<response.games.length; i++){
                 
@@ -58,23 +62,30 @@ function searchGames(){
                 img.attr("src", response.games[i].images.small)
                 gameBox.append(header, img);
                 
-            }    
+        }    }    
         
-        })
+        
+    })
 }
 // Function to add minimum player parameter
 function addMinPlayers(){
-    var number = parseInt(minPlayersInput.val().trim());
-    minPlayers = "&gt_min_players=" + (number - 1);
-    minPlayersDisplay.text("Minimum Players: " + number);
-    console.log(minPlayers);
+        
+        console.log(minPlayersInput.val().trim());
+        var number = parseInt(minPlayersInput.val().trim());
+        minPlayers = "&gt_min_players=" + (number - 1);
+        minPlayersDisplay.text("Minimum Players: " + number);
+        console.log(minPlayers);
+
 }
 // Function to add maximum player parameter
 function addMaxPlayers(){
-    var number = parseInt(maxPlayersInput.val().trim());
-    maxPlayers = "&lt_max_players=" + (number + 1);
-    maxPlayersDisplay.text("Maximum Players: " + number)
-    console.log(maxPlayers);
+    
+        console.log(maxPlayersInput.val().trim());
+        var number = parseInt(maxPlayersInput.val().trim());
+        maxPlayers = "&lt_max_players=" + (number + 1);
+        maxPlayersDisplay.text("Maximum Players: " + number)
+        console.log(maxPlayers);
+
 }
 // function to add maximum MSRP parameter
 function addMaxPrice(){
