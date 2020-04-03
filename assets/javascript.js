@@ -20,7 +20,6 @@ var categoryID = "";
 var mechanicID = "";
 var videoType = "Game Review"
 
-$('searchForm').parsley();
 
 // Function to run when search executes
 function searchGames(){
