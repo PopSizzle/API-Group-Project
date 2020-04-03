@@ -1,4 +1,5 @@
 // Declare all variables, including calls to ids
+var gamesData;
 var gameBox = $("#gameInfoBox");
 var searchButton = $("#searchGames");
 var clearButton = $("#clearSearch");
@@ -48,7 +49,11 @@ function searchGames(){
     }).then(function(response){
         // Empty Display Box
         gameBox.empty();
+
         console.log(response);
+
+        // by Cristina:  added the response to global variable so I can access it for the Modal.
+        gamesData = response.games;
             // For each game returned, check if category and mechanics preferences are matched
             for( var i = 0; i<response.games.length; i++){
                 
@@ -56,7 +61,7 @@ function searchGames(){
                 console.log("worker Placement");
                 var header = $("<h3>");
                 header.text(response.games[i].name);
-                var img = $("<img>");
+                var img = $("<img>"); 
                 img.attr("src", response.games[i].images.small)
                 gameBox.append(header, img);
                 
