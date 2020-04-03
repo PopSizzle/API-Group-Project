@@ -50,16 +50,27 @@ function searchGames(){
         gameBox.empty();
         console.log(response);
             // For each game returned, check if category and mechanics preferences are matched
-            for( var i = 0; i<response.games.length; i++){
-                
-                // Generate content if requirements are met
-                console.log("worker Placement");
-                var header = $("<h3>");
-                header.text(response.games[i].name);
-                var img = $("<img>");
-                img.attr("src", response.games[i].images.small)
-                gameBox.append(header, img);
-                
+            for( var i = 0; i<6; i++){
+                var card = "#card" + i;
+                $(card).removeClass("hidden");
+
+                var img = "#cardImage" + i;
+                var year = "#cardYear" + i;
+                var title = "#cardTitle" + i;
+                var info = "#cardInfo" + i;
+                var descript = "#cardDescript" + i;
+
+                var minNumber = response.games[i].min_players;
+                var maxNumber = response.games[i].max_players;
+                var minTime = response.games[i].min_playtime;
+                var maxTime = response.games[i].max_playtime;
+                var shortDescript = response.games[i].description_preview.split(" ").splice(0,50).join(" ");
+
+                $(img).attr("src", response.games[i].images.medium);
+                $(year).text(response.games[i].year_published);
+                $(title).text(response.games[i].name);
+                $(info).text("Players: " + minNumber + "-" + maxNumber + " Playtime: " + minTime + "-" + maxTime + "minutes");
+                $(descript).text(shortDescript);
             }    
         
         })
@@ -137,7 +148,6 @@ function clearSearch(){
     $("#nameInput").val("");
     $("#minPlayersInput").val("");
     $("#maxPlayersInput").val("");
-    $("#mechanicInput").set()
     $("#maxPriceInput").val("");
     console.log("clear");
 }

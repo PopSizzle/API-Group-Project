@@ -16,7 +16,8 @@ var maxPlayers = 100;
 var maxPrice = "&lt_msrp=" + 1000;
 var categoryID = "";
 var mechanicID = "";
-var videoType = "Game Review"
+var videoType = "Game Review";
+var cardImg1 = $("#cardImage1");
 
 
 // Function to run when search executes
@@ -45,24 +46,12 @@ function searchGames(){
         method: "GET"
     }).then(function(response){
         
-        if(response.games.length === 0){
-            $("#invalid").text("Your search yielded 0 results. Please adjust your settings and search again.")
-        }
-
-        else{
             console.log(response);
-            // For each game returned, check if category and mechanics preferences are matched
-            for( var i = 0; i<response.games.length; i++){
+            
+            var img = response.games[0].images.medium;
+            cardImg1.attr("src", img);
+            console.log(img);
                 
-                // Generate content if requirements are met
-                console.log("worker Placement");
-                var header = $("<h3>");
-                header.text(response.games[i].name);
-                var img = $("<img>");
-                img.attr("src", response.games[i].images.small)
-                gameBox.append(header, img);
-                
-        }    }    
         
         
     })
