@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/parsley.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="assets/style.css">
     
-    <title>test</title>
+    <title>GameBoard</title>
 
 </head>
 
@@ -46,7 +46,7 @@
 
                         <h2 class="text-gray-700  font-bold text-center">Search your Game</h2>
 
-                        <form class="w-full max-w-lg">
+                        <form id="searchForm" class="w-full max-w-lg" data-parsley-validate="parsley">
                             <div class="flex flex-wrap -mx-2 mb-2">
                                 <div class="w-full  px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -69,26 +69,24 @@
                                 <div class="w-full md:w-1/2 px-1 mb-1 md:mb-0">
 
                                     <div class="relative">
-                                        <label
-                                            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                            for="minPlayersInput">
-                                            Min Number of Players
-                                        </label>
-                                        <input
-                                            class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-1 mb-1 leading-tight focus:outline-none focus:bg-white"
-                                            id="minPlayersInput" type="text">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                        for="minPlayersInput">
+                                        Min Number of Players
+                                    </label>
+                                    <input
+                                        class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-1 mb-1 leading-tight focus:outline-none focus:bg-white"
+                                        id="minPlayersInput" type="number" min="1" max="10" data-parsley-trigger="change" required="true">
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 px-1 mb-1 md:mb-0">
                                     <div class="relative">
-                                        <label
-                                            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                            for="maxPlayersInput">
-                                            Max Number of Players
-                                        </label>
-                                        <input
-                                            class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-1 mb-1 leading-tight focus:outline-none focus:bg-white"
-                                            id="maxPlayersInput" type="text">
+                                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                        for="maxPlayersInput">
+                                        Max Number of Players
+                                    </label>
+                                    <input
+                                        class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-1 mb-1 leading-tight focus:outline-none focus:bg-white"
+                                        id="maxPlayersInput" type="number" min="1" max="20" data-parsley-trigger="change" required="true">
                                     </div>
                                 </div>
                             </div>
@@ -173,12 +171,12 @@
                             <div class="flex flex-wrap -mx-2 mb-2">
                                 <div class="w-full  px-3 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                        for="grid-first-name">
+                                        for="maxPriceInput">
                                         Max Price
                                     </label>
                                     <input
                                         class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-1 mb-1 leading-tight focus:outline-none focus:bg-white"
-                                        id="grid-first-name" type="text">
+                                        id="maxPriceInput" type="text" data-parsley-type="number" data-parsley-min="1" data-parsley-trigger="change">
 
                                 </div>
                             </div>
@@ -209,18 +207,18 @@
                 <div class="flex flex-wrap justify-between pt-12 -mx-6">
 
                     <!-- Row 1 - 1/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div id="card0" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title mamamammamama
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here xxxxxxxxxx
-                            </p>
-
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img id="cardImage0" class="h-64 w-full rounded-t pb-6">
+                                <p id="cardYear0" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div id= "cardTitle0" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <div id="cardInfo0" style="font-size: 10px;"></div>
+                                <p id="cardDescript0" style="font-size: 15px;" cardclass="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button
@@ -232,18 +230,18 @@
 
 
                     <!-- Row 1 - 2/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div id="card1" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title asjflasjdfjwkefjlj
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here yyyyyyyyyyy
-                            </p>
-
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img id="cardImage1">
+                                <p id="cardYear1" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div id="cardTitle1" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <div id="cardInfo1" style="font-size: 10px;"></div>
+                                <p id="cardDescript1" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button
@@ -254,19 +252,19 @@
 
                     </div>
 
-
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <!-- Row 1 - 3/3 col -->
+                    <div id="card2" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
+                                <img id="cardImage2">
+                                <p id="cardYear2" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div id="cardTitle2" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <div id="cardInfo2" style="font-size: 10px;"></div>
+                                <p id="cardDescript2" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button
@@ -280,18 +278,18 @@
                     </div>
 
                     <!-- Row 2 - 1/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div id="card3" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img id="cardImage3">
+                                <p id="cardYear3" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div id="cardTitle3" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <div id="cardInfo3" style="font-size: 10px;"></div>
+                                <p id="cardDescript3" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button
@@ -303,18 +301,18 @@
                     </div>
 
                     <!-- Row 2 - 2/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div id="card4" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img id="cardImage4">
+                                <p id="cardYear4" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div id="cardTitle4" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <div id="cardInfo4" style="font-size: 10px;"></div>
+                                <p id="cardDescript4" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button
@@ -328,18 +326,18 @@
 
 
                     <!-- Row 2 - 3/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div id="card5" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <img id="cardImage5">
+                                <p id="cardYear5" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
+                                <div id="cardTitle5" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                </div>
+                                <div id="cardInfo5" style="font-size: 10px;"></div>
+                                <p id="cardDescript5" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    Description of the game goes here
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button
@@ -350,7 +348,7 @@
                     </div>
 
                     <!-- Row 3 - 1/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
 
                             <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
@@ -371,7 +369,7 @@
                         </div>
                     </div>
                     <!-- Row 3 - 2/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
                             <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
@@ -392,7 +390,7 @@
                         </div>
                     </div>
                     <!-- Row 3 - 1/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
                             <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
@@ -479,7 +477,7 @@
 
     <script src="./assets/modal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/parsley.min.js"></script>
+    <script src="assets/parsley.js"></script>
     <script src="assets/javascript.js"></script>
 </body>
 
