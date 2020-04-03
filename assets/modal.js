@@ -49,10 +49,13 @@
             document.getElementById("titleGameModal").innerHTML=selectedGame.name;
             document.getElementById("min-players-modal").innerHTML="Min. Number of Players:  "+selectedGame.min_players;
             document.getElementById("max-players-modal").innerHTML="Max. Number of Players:  "+selectedGame.max_players;
-            document.getElementById("purchase-price-modal").innerHTML="Purchase Price:  $"+selectedGame.price;
+            document.getElementById("purchase-price-modal").innerHTML="Purchase Price:  $"+selectedGame.msrp;
             document.getElementById("year-published-modal").innerHTML="Year Published:  "+selectedGame.year_published;
             document.getElementById("max-play-time-modal").innerHTML="Max. Play Time:  "+selectedGame.max_playtime;
-            
+            // var gameName = selectedGame.name;
+
+            // var URL = youtubeResponse(gameName);
+            // document.getElementById("youTubeModal").setAttribute("src", URL);
         }
 
         const body = document.querySelector('body')
