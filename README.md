@@ -27,8 +27,6 @@ In this time of people living indoors, many people are turning to board games. T
 
 Our web application integrates information from several key third-party APIs providing users an easy-to-use discovery platform to obtain the insight on new potential games necessary to make the right choice with their next board game party.
 
-## Code Example
-
 ## Implemented Technologies
 - HTML
 - CSS
@@ -39,7 +37,12 @@ Our web application integrates information from several key third-party APIs pro
 - Board Game Atlas API
 - YouTube Videos API
 
+## Application Demo
+
 Show what the APP does as concisely as possible: Screen Shots of relevant code, gif of the working application
+
+## Code Examples
+
 
 ## Tailwindcss
 
@@ -51,12 +54,34 @@ Show what the APP does as concisely as possible: Screen Shots of relevant code, 
 
 ## YouTube Videos API
 
+Below is a function to dynamically search Youtube Videos API based on user click of game card and create video src link to embed on modal element.
 
+```js
+function youtubeResponse(selectedGame){
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType + selectedGame + "&type=video&key=AIzaSyAjs8I4xGPzoBBcuCk4afKvx-IRoVaQX0A"
+
+    console.log(queryURL);
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){
+
+        var videoId = response.items[0].id.videoId;
+        
+        return "https://www.youtube.com/embed/" + videoId;
+    })
+}
+```
 
 ## Application & Github Links
 
-Cristina Terry, Sam Poppe, & Will Gibson
+[GameBoard](https://popsizzle.github.io/API-Group-Project/)
+
 
 [GitHub](https://github.com/PopSizzle/API-Group-Project)
 
-[GameBoard](https://popsizzle.github.io/API-Group-Project/)
+## Author Links
+
+Created by: 
+
+[Cristina Terry](#) , [Sam Poppe](https://www.linkedin.com/in/sam-poppe-623281193/) , & [Will Gibson ](https://www.linkedin.com/in/wtgibson/)
