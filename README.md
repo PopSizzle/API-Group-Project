@@ -1,5 +1,7 @@
 ## API Group Project 1: GameBoard
 
+## Synopsis
+
 GameBoard is a web application that integrates information from several third-party APIs providing users an easy-to-use discovery platform of new potential games to play.
 
 In this time of people living indoors, many people are turning to board games, they may need help figuring out what board game is right for them. Our app aims to help people figure out which board games they should consider based on a variety of preferences.
@@ -19,14 +21,13 @@ Must be interactive (i.e: accept and respond to user input)
 Must have some repeating element / table
 ```
 
-Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+## Motivation
 
 In this time of people living indoors, many people are turning to board games. They may need help figuring out what board game is right for them. Our app is aiming to help people figure out which board games they should consider based on a variety of preferences. We will also compile information for them that will make learning and playing the game easier, such as youtube instructional videos, reviews, and locations of either online or local game shops that could sell them the game they want.
 
 Our web application integrates information from several key third-party APIs providing users an easy-to-use discovery platform to obtain the insight on new potential games necessary to make the right choice with their next board game party.
 
-Code Example
+## Code Example
 
 ## Implemented Technologies
 - HTML
