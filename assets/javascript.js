@@ -74,7 +74,7 @@ function searchGames(){
                 $(img).attr("src", response.games[i].images.medium);
                 $(year).text(response.games[i].year_published);
                 $(title).text(response.games[i].name);
-                $(info).text("Players: " + minNumber + "-" + maxNumber + " Playtime: " + minTime + "-" + maxTime + "minutes");
+                $(info).text("---Players: " + minNumber + "-" + maxNumber + " Playtime: " + minTime + "-" + maxTime + "minutes");
                 $(descript).text(shortDescript);
             }    
         
@@ -154,8 +154,8 @@ function clearSearch(){
     $("#minPlayersInput").val("");
     $("#maxPlayersInput").val("");
     $("#maxPriceInput").val("");
-    $("#mechanicInput").val("none");
-    $("#categoryInput").val("none");
+    $("#mechanicInput").val("0");
+    $("#categoryInput").val("0");
     console.log("clear");
 
     for(var i=0; i<6; i++){
