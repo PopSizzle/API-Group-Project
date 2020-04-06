@@ -38,7 +38,7 @@ Our web application integrates information from several key third-party APIs pro
 
 ## Application Demo
 
-![Site](car-quiz.png)
+![Site](assets/gameboard-demo.gif)
 
 ## Code Examples
 
