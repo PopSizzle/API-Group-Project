@@ -42,7 +42,7 @@
             dataElementIndex = parseInt(id.split('_')[1]);
             console.log('dataElementIndex', dataElementIndex)
 
-            console.log("gamesData", gamesData);
+            console.log("gamesData inside modal", gamesData);
             var selectedGame = gamesData[dataElementIndex];
 
             console.log('selectedGame', selectedGame);
@@ -52,10 +52,7 @@
             document.getElementById("purchase-price-modal").innerHTML="Purchase Price:  $"+selectedGame.msrp;
             document.getElementById("year-published-modal").innerHTML="Year Published:  "+selectedGame.year_published;
             document.getElementById("max-play-time-modal").innerHTML="Max. Play Time:  "+selectedGame.max_playtime;
-            // var gameName = selectedGame.name;
-
-            // var URL = youtubeResponse(gameName);
-            // document.getElementById("youTubeModal").setAttribute("src", URL);
+            document.getElementById("youTubeModal").setAttribute("src",selectedGame.ytURL);
         }
 
         const body = document.querySelector('body')
