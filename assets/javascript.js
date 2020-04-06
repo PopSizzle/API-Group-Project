@@ -74,7 +74,7 @@ function searchGames(){
                 $(img).attr("src", response.games[i].images.medium);
                 $(year).text(response.games[i].year_published);
                 $(title).text(response.games[i].name);
-                $(info).text("---Players: " + minNumber + "-" + maxNumber + " Playtime: " + minTime + "-" + maxTime + "minutes");
+                $(info).text("Players: " + minNumber + "-" + maxNumber + " | Playtime: " + minTime + "-" + maxTime + "minutes");
                 $(descript).text(shortDescript);
             }    
         

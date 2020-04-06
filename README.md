@@ -1,5 +1,7 @@
 ## API Group Project 1: GameBoard
 
+## Synopsis
+
 GameBoard is a web application that integrates information from several third-party APIs providing users an easy-to-use discovery platform of new potential games to play.
 
 In this time of people living indoors, many people are turning to board games, they may need help figuring out what board game is right for them. Our app aims to help people figure out which board games they should consider based on a variety of preferences.
@@ -19,14 +21,11 @@ Must be interactive (i.e: accept and respond to user input)
 Must have some repeating element / table
 ```
 
-Motivation
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
+## Motivation
 
 In this time of people living indoors, many people are turning to board games. They may need help figuring out what board game is right for them. Our app is aiming to help people figure out which board games they should consider based on a variety of preferences. We will also compile information for them that will make learning and playing the game easier, such as youtube instructional videos, reviews, and locations of either online or local game shops that could sell them the game they want.
 
 Our web application integrates information from several key third-party APIs providing users an easy-to-use discovery platform to obtain the insight on new potential games necessary to make the right choice with their next board game party.
-
-Code Example
 
 ## Implemented Technologies
 - HTML
@@ -38,7 +37,12 @@ Code Example
 - Board Game Atlas API
 - YouTube Videos API
 
+## Application Demo
+
 Show what the APP does as concisely as possible: Screen Shots of relevant code, gif of the working application
+
+## Code Examples
+
 
 ## Tailwindcss
 
@@ -50,12 +54,34 @@ Show what the APP does as concisely as possible: Screen Shots of relevant code, 
 
 ## YouTube Videos API
 
+Below is a function to dynamically search Youtube Videos API based on user click of game card and create video src link to embed on modal element.
 
+```js
+function youtubeResponse(selectedGame){
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType + selectedGame + "&type=video&key=AIzaSyAjs8I4xGPzoBBcuCk4afKvx-IRoVaQX0A"
+
+    console.log(queryURL);
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){
+
+        var videoId = response.items[0].id.videoId;
+        
+        return "https://www.youtube.com/embed/" + videoId;
+    })
+}
+```
 
 ## Application & Github Links
 
-Cristina Terry, Sam Poppe, & Will Gibson
+[GameBoard](https://popsizzle.github.io/API-Group-Project/)
+
 
 [GitHub](https://github.com/PopSizzle/API-Group-Project)
 
-[GameBoard](https://popsizzle.github.io/API-Group-Project/)
+## Author Links
+
+Created by: 
+
+[Cristina Terry](#) , [Sam Poppe](https://www.linkedin.com/in/sam-poppe-623281193/) , & [Will Gibson ](https://www.linkedin.com/in/wtgibson/)
