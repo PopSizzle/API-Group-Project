@@ -44,7 +44,7 @@
                     <!-- add search game and criteria -->
                     <div class="w-full md:w-6/8 flex flex-col flex-grow">
 
-                        <h2 class="text-gray-700  font-bold text-center">Search your Game</h2>
+                        <h2 class="text-gray-700  font-bold text-center mt-2">Search Your Game</h2>
 
                         <form id="searchForm" class="w-full max-w-lg" data-parsley-validate="parsley">
                             <div class="flex flex-wrap -mx-2 mb-2">
@@ -66,7 +66,7 @@
 
                             <div class="flex flex-wrap  mb-2">
 
-                                <div class="w-full md:w-1/2 px-1 mb-1 md:mb-0">
+                                <div class="w-full md:w-1/2 px-4 mb-1 md:mb-0">
 
                                     <div class="relative">
                                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -78,7 +78,7 @@
                                         id="minPlayersInput" type="number" min="1" max="10" data-parsley-trigger="change" required="true" value="1">
                                     </div>
                                 </div>
-                                <div class="w-full md:w-1/2 px-1 mb-1 md:mb-0">
+                                <div class="w-full md:w-1/2 px-4 mb-1 md:mb-0">
                                     <div class="relative">
                                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                         for="maxPlayersInput">
@@ -95,7 +95,7 @@
                             <!-- dropdown1 -->
                             <div class="flex flex-wrap  mb-2">
 
-                                <div class="w-full md:w-1/2 px-1 mb-1 md:mb-0">
+                                <div class="w-full md:w-1/2 px-4 mb-1 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                         for="mechanicInput">
                                         MECHANICS
@@ -129,7 +129,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="w-full md:w-1/2 px-1 mb-1 md:mb-0">
+                                <div class="w-full md:w-1/2 px-4 mb-1 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                         for="categoryInput">
                                         CATEGORY
@@ -169,7 +169,7 @@
                             </div>
 
                             <div class="flex flex-wrap -mx-2 mb-2">
-                                <div class="w-full  px-3 mb-6 md:mb-0">
+                                <div class="w-full  px-6 mb-6 md:mb-0">
                                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                         for="maxPriceInput">
                                         Max Price
@@ -183,21 +183,22 @@
 
 
                             <!-- submit button -->
+                            <div>
+                                <button id="searchGames"
+                                    class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-semibold hover:text-white py-2 px-48 ml-6 mb-3 mr-5 hover:border-transparent border rounded text-2xl">
+                                    Search
+                                </button>
+                            </div>
+                            <div>
+                                <button id="clearSearch"
+                                    class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-semibold hover:text-white py-2 px-40 ml-6 mb-3 mr-5 hover:border-transparent border rounded text-2xl">
+                                    Clear Search
+                                </button>
+                            </div>
 
                         </form>
-
-                        <button id="searchGames"
-                            class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-semibold hover:text-white py-1 px-1  hover:border-transparent rounded">
-                            Search
-                        </button>
-
-                        <button id="clearSearch"
-                            class="bg-blue-100 hover:bg-blue-200 text-blue-700 font-semibold hover:text-white py-1 px-1  hover:border-transparent rounded">
-                            Clear Search
-                        </button>
-
+                            
                     </div>
-
 
                 </div>
 
@@ -211,12 +212,12 @@
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
                                 <img id="cardImage0" class="h-64 w-full rounded-t pb-6">
-                                <p id="cardYear0" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                                <div id= "cardTitle0" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                <p id="cardYear0" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id= "cardTitle0" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
                                 </div>
-                                <div id="cardInfo0" style="font-size: 10px;"></div>
-                                <p id="cardDescript0" style="font-size: 15px;" cardclass="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                    Description of the game goes here
+                                <div id="cardInfo0" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
+                                <p id="cardDescript0" style="font-size: 15px;" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    
                                 </p>
                             <!-- </a> -->
 
@@ -233,13 +234,13 @@
                     <div id="card1" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                                <img id="cardImage1">
-                                <p id="cardYear1" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                                <div id="cardTitle1" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                <img id="cardImage1" class="h-64 w-full rounded-t pb-6">
+                                <p id="cardYear1" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle1" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
                                 </div>
-                                <div id="cardInfo1" style="font-size: 10px;"></div>
+                                <div id="cardInfo1" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
                                 <p id="cardDescript1" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                    Description of the game goes here
+                                    
                                 </p>
                             <!-- </a> -->
 
@@ -256,13 +257,13 @@
                     <div id="card2" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                                <img id="cardImage2">
-                                <p id="cardYear2" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                                <div id="cardTitle2" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                <img id="cardImage2" class="h-64 w-full rounded-t pb-6">
+                                <p id="cardYear2" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle2" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
                                 </div>
-                                <div id="cardInfo2" style="font-size: 10px;"></div>
+                                <div id="cardInfo2" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
                                 <p id="cardDescript2" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                    Description of the game goes here
+                                    
                                 </p>
                             <!-- </a> -->
 
@@ -281,13 +282,13 @@
                     <div id="card3" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                                <img id="cardImage3">
-                                <p id="cardYear3" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                                <div id="cardTitle3" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                <img id="cardImage3" class="h-64 w-full rounded-t pb-6">
+                                <p id="cardYear3" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle3" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
                                 </div>
-                                <div id="cardInfo3" style="font-size: 10px;"></div>
+                                <div id="cardInfo3" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
                                 <p id="cardDescript3" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                    Description of the game goes here
+                                    
                                 </p>
                             <!-- </a> -->
 
@@ -304,13 +305,13 @@
                     <div id="card4" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                                <img id="cardImage4">
-                                <p id="cardYear4" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                                <div id="cardTitle4" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                <img id="cardImage4" class="h-64 w-full rounded-t pb-6">
+                                <p id="cardYear4" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle4" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
                                 </div>
-                                <div id="cardInfo4" style="font-size: 10px;"></div>
+                                <div id="cardInfo4" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
                                 <p id="cardDescript4" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                    Description of the game goes here
+                                    
                                 </p>
                             <!-- </a> -->
 
@@ -329,13 +330,37 @@
                     <div id="card5" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                                <img id="cardImage5">
-                                <p id="cardYear5" class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                                <div id="cardTitle5" class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
+                                <img id="cardImage5" class="h-64 w-full rounded-t pb-6">
+                                <p id="cardYear5" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle5" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
                                 </div>
-                                <div id="cardInfo5" style="font-size: 10px;"></div>
+                                <div id="cardInfo5" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
                                 <p id="cardDescript5" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                    Description of the game goes here
+                                    
+                                </p>
+                            <!-- </a> -->
+
+                            <div>
+                                <button
+                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
+                                    Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3 - 1/2 col -->
+                    <div id="card6" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
+                                <div id="cardRecommended6" class="w-full font-bold text-2xl text-gray-900 px-6 mt-3 mb-3">GameBoard Recommended Pick #1
+                                </div>
+                                <img id="cardImage6" class="h-64 w-full rounded-t pb-6" src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg">
+                                <p id="cardYear6" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle6" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
+                                </div>
+                                <div id="cardInfo6" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
+                                <p id="cardDescript6" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    
                                 </p>
                             <!-- </a> -->
 
@@ -347,61 +372,21 @@
                         </div>
                     </div>
 
-                    <!-- Row 3 - 1/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
-                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
-
-                            <div>
-                                <button
-                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
-                                    Info</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 3 - 2/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
+                    <!-- Row 3 - 2/2 col -->
+                    <div id="card7" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                         <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                             <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
-
-                            <div>
-                                <button
-                                    class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full ml-6 mb-6">More
-                                    Info</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 3 - 1/3 col -->
-                    <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink hidden">
-                        <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                            <!-- <a href="#" class="flex flex-wrap no-underline hover:no-underline"> -->
-                            <img src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg"
-                                class="h-64 w-full rounded-t pb-6">
-                            <p class="w-full text-gray-600 text-xs md:text-sm px-6">Year Published</p>
-                            <div class="w-full font-bold text-xl text-gray-900 px-6 mt-2">Game Title
-                            </div>
-                            <p class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
-                                Description of the game goes here
-                            </p>
-
+                                <div id="cardRecommended7" class="w-full font-bold text-2xl text-gray-900 px-6 mt-3 mb-3">GameBoard Recommended Pick #2
+                                </div>
+                                <img id="cardImage7" class="h-64 w-full rounded-t pb-6" src="https://www.washingtonpost.com/resizer/u0R6ZoQGZhrFIL7E7JYS2tDK0Sg=/767x0/smart/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/G3KQYLSD3QI6RMW4WCSAHZDSBI.jpg">
+                                <p id="cardYear7" class="w-full text-gray-600 text-xs md:text-sm px-6"></p>
+                                <div id="cardTitle7" class="w-full font-bold text-xl text-gray-900 px-6 mt-3">
+                                </div>
+                                <div id="cardInfo7" class="w-full text-gray-600 text-xs md:text-sm px-6 py-2"></div>
+                                <p id="cardDescript7" style="font-size: 15px" class="text-gray-800 font-serif text-base px-6 mb-16 mt-2">
+                                    
+                                </p>
+                            <!-- </a> -->
 
                             <div>
                                 <button

@@ -56,6 +56,7 @@ function searchGames() {
 
         // by Cristina:  added the response to global variable so I can access it for the Modal.
         gamesData = response.games;
+
         // For each game returned, check if category and mechanics preferences are matched
         for (var i = 0; i < 6; i++) {
             var card = "#card" + i;
