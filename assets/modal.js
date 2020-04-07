@@ -45,11 +45,7 @@
 
             console.log("gamesData inside modal", gamesData);
 
-            if(dataElementIndex === 6 || dataElementIndex === 7){
-                var index = dataElementIndex - 6;
-                selectedGame = recGamesData[index];
-            }
-            else{selectedGame = gamesData[dataElementIndex]}
+            selectedGame = gamesData[dataElementIndex];
             console.log(selectedGame);
 
 

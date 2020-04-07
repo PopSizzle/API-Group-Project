@@ -73,26 +73,26 @@ function recommend(){
         $("#cardDescript6").text(recGamesData[0].description_preview.split(" ").splice(0, 50).join(" "));
         $("#cardDescript7").text(recGamesData[1].description_preview.split(" ").splice(0, 50).join(" "));
         // Recommended Game Youtube Link
-        for(var i=0; i<2; i++){
-            var recQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType.trim() + recGamesData[i].name.trim() + "&type=video&key=AIzaSyDZ9OFjnehR5H8D-aolcw85O_ovUUTdCNM"
+//         for(var i=0; i<2; i++){
+//             var recQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType.trim() + recGamesData[i].name.trim() + "&type=video&key=AIzaSyDZ9OFjnehR5H8D-aolcw85O_ovUUTdCNM"
 
-            console.log(recQueryURL);
-            var yt_url = "";
+//             console.log(recQueryURL);
+//             var yt_url = "";
 
-            $.ajax({
-                url: queryURL2,
-                method: "GET",
-                async: false,
-                success: function (youtubeResponse) {
-                    console.log('youtubeResponse', youtubeResponse);
-                    var videoId = youtubeResponse.items[0].id.videoId;
-                    yt_url = "https://www.youtube.com/embed/" + videoId;
-                }
-            })
+//             $.ajax({
+//                 url: queryURL2,
+//                 method: "GET",
+//                 async: false,
+//                 success: function (youtubeResponse) {
+//                     console.log('youtubeResponse', youtubeResponse);
+//                     var videoId = youtubeResponse.items[0].id.videoId;
+//                     yt_url = "https://www.youtube.com/embed/" + videoId;
+//                 }
+//             })
             
-            recGamesData[i].ytURL = yt_url;
-            console.log("object : " + recGamesData[i].ytURL);
-        }
+//             recGamesData[i].ytURL = yt_url;
+//             console.log("object : " + recGamesData[i].ytURL);
+//         }
     })
 }
 
@@ -150,29 +150,29 @@ function searchGames() {
             $(year).text(response.games[i].year_published);
             $(title).text(response.games[i].name);
             response.games[i]["ytURL"] = "";
-            // Youtube Link for recommended Games
-            // var queryURL2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType + response.games[i].name + "&type=video&key=AIzaSyDZ9OFjnehR5H8D-aolcw85O_ovUUTdCNM"
+           
+            var queryURL2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType + response.games[i].name + "&type=video&key=AIzaSyDZ9OFjnehR5H8D-aolcw85O_ovUUTdCNM"
 
-            // console.log(queryURL2);
-            // var yt_url = "";
+            console.log(queryURL2);
+            var yt_url = "";
 
-            // $.ajax({
-            //     url: queryURL2,
-            //     method: "GET",
-            //     async: false,
-            //     success: function (youtubeResponse) {
-            //         console.log('youtubeResponse', youtubeResponse);
-            //         var videoId = youtubeResponse.items[0].id.videoId;
-            //         yt_url = "https://www.youtube.com/embed/" + videoId;
-            //     }
-            // })
-            // response.games[i].ytURL = yt_url;
-            // console.log("object : " + response.games[i].ytURL);
+            $.ajax({
+                url: queryURL2,
+                method: "GET",
+                async: false,
+                success: function (youtubeResponse) {
+                    console.log('youtubeResponse', youtubeResponse);
+                    var videoId = youtubeResponse.items[0].id.videoId;
+                    yt_url = "https://www.youtube.com/embed/" + videoId;
+                }
+            })
+            response.games[i].ytURL = yt_url;
+            console.log("object : " + response.games[i].ytURL);
 
 
 
-            // $(info).text("Players: " + minNumber + "-" + maxNumber + " | Playtime: " + minTime + "-" + maxTime + "minutes");
-            // $(descript).text(shortDescript);
+            $(info).text("Players: " + minNumber + "-" + maxNumber + " | Playtime: " + minTime + "-" + maxTime + "minutes");
+            $(descript).text(shortDescript);
         }
 
         console.log("1st response gamesData:  ", gamesData);
@@ -282,7 +282,6 @@ function youtubeResponse(selectedGame) {
         return yt_url;
     })
 }
-
 $(document).ready(recommend());
 
 searchButton.on("click", searchGames);
