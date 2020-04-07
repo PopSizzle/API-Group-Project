@@ -49,7 +49,32 @@ Our web application integrates information from several key third-party APIs pro
 
 ## Board Game Atlas API
 
+Below is the function which we used to search the Board Game Atlas API, along with the function that updated the requirement parameter:
 
+```js
+// Function to add mechanic to the screen
+function addMechanic() {
+    var mechanic = mechanicInput.find('option:selected').attr('data-id');
+    if (mechanic === "none") {
+        mechanicID = "";
+        console.log(mechanicID);
+    }
+    else {
+        mechanicID = "&mechanics=" + mechanic;
+        mechanicDisplay.text("Mechanic: " + mechanic);
+        console.log(mechanicID);
+    }
+}
+
+
+var queryURL = "https://www.boardgameatlas.com/api/search?" + name + minPlayers + maxPlayers + maxPrice + categoryID + mechanicID + "&order_by=popularity&ascending=false&client_id=NHfcsxreTb";
+    console.log(queryURL);
+    // AJAX call to BGA API to get objects
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+```
 
 ## YouTube Videos API
 
