@@ -42,10 +42,64 @@ Our web application integrates information from several key third-party APIs pro
 
 ## Code Examples
 
-
 ## Tailwindcss
 
+With Tailwindcss, we can just apply all the classes on the HTML set on the css file by the Tailwindcss without having to actually modify the styling file at all.
+```
+        <div class="w-full md:w-1/2 px-4 mb-1 md:mb-0">
 
+            <div class="relative">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    for="minPlayersInput">
+                    Min Number of Players
+                 </label>
+                 <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-1 px-1 mb-1 leading-tight focus:outline-none focus:bg-white"
+                        id="minPlayersInput" type="number" min="1" max="10" data-parsley-trigger="change" required="true" value="1">
+             </div>
+        </div>
+
+
+```
+In this code example, we se are setting the event listeners dynamically.
+```
+
+   for (var i = 0; i < openmodal.length; i++) {
+        openmodal[i].setAttribute('id', 'modal_' + i)
+        openmodal[i].addEventListener('click', function () {
+            toggleModal(this.id)
+        })
+    }
+
+    function toggleModal(id = null) {
+
+        var dataElementIndex; 
+        if (id !== null) {
+            dataElementIndex = parseInt(id.split('_')[1]);
+            console.log('dataElementIndex', dataElementIndex)
+
+            console.log("gamesData inside modal", gamesData);
+            var selectedGame = gamesData[dataElementIndex];
+
+            console.log('selectedGame', selectedGame);
+            document.getElementById("titleGameModal").innerHTML=selectedGame.name;
+            document.getElementById("min-players-modal").innerHTML="Min. Number of Players:  "+selectedGame.min_players;
+            document.getElementById("max-players-modal").innerHTML="Max. Number of Players:  "+selectedGame.max_players;
+            document.getElementById("purchase-price-modal").innerHTML="Purchase Price:  $"+selectedGame.msrp;
+            document.getElementById("year-published-modal").innerHTML="Year Published:  "+selectedGame.year_published;
+            document.getElementById("max-play-time-modal").innerHTML="Max. Play Time:  "+selectedGame.max_playtime;
+            document.getElementById("youTubeModal").setAttribute("src",selectedGame.ytURL);
+            document.getElementById("gbatlas-modal").setAttribute("href","https://www.boardgameatlas.com/search/?name=" + selectedGame.name);
+
+        }
+
+        const body = document.querySelector('body')
+        const modal = document.querySelector('.modal')
+        modal.classList.toggle('opacity-0')
+        modal.classList.toggle('pointer-events-none')
+        body.classList.toggle('modal-active')
+    }
+```
 
 ## Board Game Atlas API
 
