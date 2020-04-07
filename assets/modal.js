@@ -53,6 +53,8 @@
             document.getElementById("year-published-modal").innerHTML="Year Published:  "+selectedGame.year_published;
             document.getElementById("max-play-time-modal").innerHTML="Max. Play Time:  "+selectedGame.max_playtime;
             document.getElementById("youTubeModal").setAttribute("src",selectedGame.ytURL);
+            document.getElementById("gbatlas-modal").setAttribute("href","https://www.boardgameatlas.com/search/?name=" + selectedGame.name);
+
         }
 
         const body = document.querySelector('body')

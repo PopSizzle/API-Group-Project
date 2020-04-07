@@ -99,7 +99,7 @@ function searchGames() {
 
 
 
-            $(info).text("---Players: " + minNumber + "-" + maxNumber + " Playtime: " + minTime + "-" + maxTime + "minutes");
+            $(info).text("Players: " + minNumber + "-" + maxNumber + " | Playtime: " + minTime + "-" + maxTime + "minutes");
             $(descript).text(shortDescript);
         }
 
