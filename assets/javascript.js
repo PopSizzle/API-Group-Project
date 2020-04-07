@@ -1,5 +1,6 @@
 // Declare all variables, including calls to ids
 var gamesData;
+var recGamesData;
 var gamesYT_URL;
 var gameBox = $("#gameInfoBox");
 var searchButton = $("#searchGames");
@@ -21,7 +22,79 @@ var maxPrice = "&lt_msrp=" + 1000;
 var categoryID = "";
 var mechanicID = "";
 var videoType = "Game Review"
+var recGameIDs = ["wSsuGhYnVo", "RLlDWHh7hR", "oGVgRSAKwX", "fDn9rQjH9O", "GP7Y2xOUzj", "9iBOPn3lES", "OF145SrX44", "1dWE5BIcOm", "exdy1Z2bSC", "61SwzHG7fB", "D0OHY8b8Oc", "19C9ka2hEx", "fGZawn3ipZ", "Rq3eREYb0e", "sxLwbJHu77", "cb1DcPrnkz", "LTnLSWIcbH", "DMR3bbyxu2", "ZdHlXy4uxe", "1sQP1kNHja"]
 
+// Recommended Game Function
+function recommend(){
+    // Two different random integers 1-20
+    var randIndex1 = Math.floor(Math.random()*20);
+    console.log(randIndex1);
+
+    var randIndex2 = Math.floor(Math.random()*20);
+
+    if(randIndex1 === randIndex2){
+        if(randIndex2 === 20){
+            randIndex2 --;
+        }
+        else{randIndex2 ++}
+    }
+
+    console.log(randIndex2);
+
+    var gameIDs = recGameIDs[randIndex1] + "," + recGameIDs[randIndex2];
+    var searchURL = "https://www.boardgameatlas.com/api/search?ids=" + gameIDs + "&client_id=NHfcsxreTb"
+    console.log(searchURL);
+    // AJAX call for rec Games info
+    $.ajax({
+        url: searchURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+
+        recGamesData = response.games;
+        console.log(recGamesData);
+        var minNumber1 = recGamesData[0].min_players;
+        var minNumber2 = recGamesData[1].min_players;
+        var maxNumber1 = recGamesData[0].max_players;
+        var maxNumber2 = recGamesData[1].max_players;
+        var minTime1 = recGamesData[0].min_playtime;
+        var minTime2 = recGamesData[1].min_playtime;
+        var maxTime1 = recGamesData[0].max_playtime;
+        var maxTime2 = recGamesData[1].max_playtime;
+
+        $("#cardImage6").attr("src", recGamesData[0].images.medium);
+        $("#cardImage7").attr("src", recGamesData[1].images.medium);
+        $("#cardYear6").text(recGamesData[0].year_published);
+        $("#cardYear7").text(recGamesData[1].year_published);
+        $("#cardTitle6").text(recGamesData[0].name);
+        $("#cardTitle7").text(recGamesData[1].name);
+        $("#cardInfo6").text("Players: " + minNumber1 + "-" + maxNumber1 + " | Playtime: " + minTime1 + "-" + maxTime1 + "minutes");
+        $("#cardInfo7").text("Players: " + minNumber2 + "-" + maxNumber2 + " | Playtime: " + minTime2 + "-" + maxTime2 + "minutes");
+        $("#cardDescript6").text(recGamesData[0].description_preview.split(" ").splice(0, 50).join(" "));
+        $("#cardDescript7").text(recGamesData[1].description_preview.split(" ").splice(0, 50).join(" "));
+        // Recommended Game Youtube Link
+        for(var i=0; i<2; i++){
+            var recQueryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType.trim() + recGamesData[i].name.trim() + "&type=video&key=AIzaSyDZ9OFjnehR5H8D-aolcw85O_ovUUTdCNM"
+
+            console.log(recQueryURL);
+            var yt_url = "";
+
+            $.ajax({
+                url: queryURL2,
+                method: "GET",
+                async: false,
+                success: function (youtubeResponse) {
+                    console.log('youtubeResponse', youtubeResponse);
+                    var videoId = youtubeResponse.items[0].id.videoId;
+                    yt_url = "https://www.youtube.com/embed/" + videoId;
+                }
+            })
+            
+            recGamesData[i].ytURL = yt_url;
+            console.log("object : " + recGamesData[i].ytURL);
+        }
+    })
+}
 
 // Function to run when search executes
 function searchGames() {
@@ -57,7 +130,6 @@ function searchGames() {
         // by Cristina:  added the response to global variable so I can access it for the Modal.
         gamesData = response.games;
 
-        // For each game returned, check if category and mechanics preferences are matched
         for (var i = 0; i < 6; i++) {
             var card = "#card" + i;
             $(card).removeClass("hidden");
@@ -78,29 +150,29 @@ function searchGames() {
             $(year).text(response.games[i].year_published);
             $(title).text(response.games[i].name);
             response.games[i]["ytURL"] = "";
+            // Youtube Link for recommended Games
+            // var queryURL2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType + response.games[i].name + "&type=video&key=AIzaSyDZ9OFjnehR5H8D-aolcw85O_ovUUTdCNM"
 
-            var queryURL2 = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + videoType + response.games[i].name + "&type=video&key=AIzaSyAjs8I4xGPzoBBcuCk4afKvx-IRoVaQX0A"
+            // console.log(queryURL2);
+            // var yt_url = "";
 
-            console.log(queryURL2);
-            var yt_url = "";
-
-            $.ajax({
-                url: queryURL2,
-                method: "GET",
-                async: false,
-                success: function (youtubeResponse) {
-                    console.log('youtubeResponse', youtubeResponse);
-                    var videoId = youtubeResponse.items[0].id.videoId;
-                    yt_url = "https://www.youtube.com/embed/" + videoId;
-                }
-            })
-            response.games[i].ytURL = yt_url;
-            console.log("object : " + response.games[i].ytURL);
+            // $.ajax({
+            //     url: queryURL2,
+            //     method: "GET",
+            //     async: false,
+            //     success: function (youtubeResponse) {
+            //         console.log('youtubeResponse', youtubeResponse);
+            //         var videoId = youtubeResponse.items[0].id.videoId;
+            //         yt_url = "https://www.youtube.com/embed/" + videoId;
+            //     }
+            // })
+            // response.games[i].ytURL = yt_url;
+            // console.log("object : " + response.games[i].ytURL);
 
 
 
-            $(info).text("Players: " + minNumber + "-" + maxNumber + " | Playtime: " + minTime + "-" + maxTime + "minutes");
-            $(descript).text(shortDescript);
+            // $(info).text("Players: " + minNumber + "-" + maxNumber + " | Playtime: " + minTime + "-" + maxTime + "minutes");
+            // $(descript).text(shortDescript);
         }
 
         console.log("1st response gamesData:  ", gamesData);
@@ -210,37 +282,8 @@ function youtubeResponse(selectedGame) {
         return yt_url;
     })
 }
-//         for ( var i = 0; i < 6; i++) {
-//         //   var videoDiv = $("<div>");
-//         //   var header = $("<h3>");
-//         //   var description = $("<p>");
-//           var videoThumbnail = $('<iframe width="300" height="200" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>')
 
-//         //   console.log("videoDiv " + (i+1));
-
-//         //   videoDiv.append(header);
-//           videoDiv.append(videoThumbnail);
-//         //   videoDiv.append(description);
-//           $(".video-results").append(videoDiv);
-
-//           var videoTitle = response.items[i].snippet.title;
-//           console.log(videoTitle);
-
-//           var videoId = response.items[i].id.videoId;
-//           console.log(videoId);
-
-//           var videoDescription = response.items[i].snippet.description
-//           console.log(videoDescription);
-
-//           videoDiv.attr("id","video" + (i+1));
-//           header.text(videoTitle);
-//           description.text(videoDescription);
-//           videoThumbnail.attr("src","https://www.youtube.com/embed/" + videoId)
-
-//         };  
-//     });
-//   };
-
+$(document).ready(recommend());
 
 searchButton.on("click", searchGames);
 

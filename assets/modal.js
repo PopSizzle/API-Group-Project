@@ -38,12 +38,20 @@
     function toggleModal(id = null) {
 
         var dataElementIndex; 
+        var selectedGame;
         if (id !== null) {
             dataElementIndex = parseInt(id.split('_')[1]);
             console.log('dataElementIndex', dataElementIndex)
 
             console.log("gamesData inside modal", gamesData);
-            var selectedGame = gamesData[dataElementIndex];
+
+            if(dataElementIndex === 6 || dataElementIndex === 7){
+                var index = dataElementIndex - 6;
+                selectedGame = recGamesData[index];
+            }
+            else{selectedGame = gamesData[dataElementIndex]}
+            console.log(selectedGame);
+
 
             console.log('selectedGame', selectedGame);
             document.getElementById("titleGameModal").innerHTML=selectedGame.name;
@@ -54,6 +62,7 @@
             document.getElementById("max-play-time-modal").innerHTML="Max. Play Time:  "+selectedGame.max_playtime;
             document.getElementById("youTubeModal").setAttribute("src",selectedGame.ytURL);
             document.getElementById("gbatlas-modal").setAttribute("href","https://www.boardgameatlas.com/search/?name=" + selectedGame.name);
+
 
         }
 
